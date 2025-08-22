@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
     <!-- Header -->
     <header>
@@ -40,8 +42,9 @@
             <div class="contact-container">
                 <div class="contact-info">
                     <h2>Get In Touch</h2>
-                    <p>Have questions about our products or want to place a bulk order? Reach out to us through any of these channels:</p>
-                    
+                    <p>Have questions about our products or want to place a bulk order? Reach out to us through any of
+                        these channels:</p>
+
                     <div class="contact-details">
                         <div class="contact-item">
                             <i class="fas fa-map-marker-alt contact-icon"></i>
@@ -70,36 +73,47 @@
                             <i class="fas fa-clock contact-icon"></i>
                             <div>
                                 <h3>Business Hours</h3>
-                                <p>Monday - Friday: 8:00 AM - 5:00 PM</p>
-                                <p>Saturday: 9:00 AM - 2:00 PM</p>
+                                <p>Monday - Sunday: 7:00 AM - 6:00 PM</p>
+                                <!-- <p>Saturday: 9:00 AM - 2:00 PM</p> -->
                             </div>
                         </div>
                     </div>
-                    
+
                     <h3>Follow Us</h3>
                     <div class="social-links">
-                        <a href="https://www.facebook.com/kyidomfoods?mibextid=ZbWKwL" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                    <a href="http://tiktok.com/@kyidomfoods" class="social-link"><i class="fab fa-tiktok"></i></a>
-                    <a href="https://www.instagram.com/kyidomfoods?igsh=MTZ0NjY2OHFjNG01" class="social-link"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/company/jireh-aidoo-ltd/" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.facebook.com/kyidomfoods?mibextid=ZbWKwL" class="social-link"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="http://tiktok.com/@kyidomfoods" class="social-link"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.instagram.com/kyidomfoods?igsh=MTZ0NjY2OHFjNG01" class="social-link"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/jireh-aidoo-ltd/" class="social-link"><i
+                                class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
-                
+
                 <div class="contact-form">
                     <h2>Send Us a Message</h2>
-                    <form id="contactForm">
+                    <form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true"
+                        action="/thank-you">
+
+                        <!-- Hidden input for Netlify form handling -->
+                        <input type="hidden" name="form-name" value="contact">
+
                         <div class="form-group">
                             <label for="name">Full Name *</label>
                             <input type="text" id="name" name="name" required>
                         </div>
+
                         <div class="form-group">
                             <label for="email">Email Address *</label>
                             <input type="email" id="email" name="email" required>
                         </div>
+
                         <div class="form-group">
                             <label for="phone">Phone Number</label>
                             <input type="tel" id="phone" name="phone">
                         </div>
+
                         <div class="form-group">
                             <label for="subject">Subject *</label>
                             <select id="subject" name="subject" required>
@@ -111,13 +125,19 @@
                                 <option value="partnership">Partnership Opportunities</option>
                             </select>
                         </div>
+
                         <div class="form-group">
                             <label for="message">Your Message *</label>
                             <textarea id="message" name="message" rows="5" required></textarea>
                         </div>
+
+                        <!-- ✅ Netlify reCAPTCHA placeholder -->
+                        <div data-netlify-recaptcha="true"></div>
+
                         <button type="submit" class="btn">Send Message</button>
                     </form>
                 </div>
+
             </div>
         </div>
     </section>
@@ -127,140 +147,174 @@
         <div class="container">
             <h2 class="section-title">Our Location</h2>
             <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.959809908249!2d-0.43737972635616346!3d5.572960633481696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdfa50078dbe7ad%3A0xce668dd1a062d5d0!2sOtta%20City(%20Eugene%E2%80%99s%20house)!5e0!3m2!1sen!2sgh!4v1755611419544!5m2!1sen!2sgh" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.959809908249!2d-0.43737972635616346!3d5.572960633481696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdfa50078dbe7ad%3A0xce668dd1a062d5d0!2sOtta%20City(%20Eugene%E2%80%99s%20house)!5e0!3m2!1sen!2sgh!4v1755611419544!5m2!1sen!2sgh"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
     </section>
 
     <!-- FAQ Section -->
     <section class="section faq">
-    <div class="container">
-        <h2 class="section-title">Frequently Asked Questions</h2>
-        <div class="faq-container">
-            <!-- Existing FAQ Item -->
-            <div class="faq-item">
-                <button class="faq-question">
-                    Where can I buy Kyidom Rice?
-                    <i class="fas fa-chevron-down"></i>
-                </button>
-                <div class="faq-answer">
-                    <p>Kyidom Rice is available in major supermarkets across Ghana including Shoprite, Melcom, and MaxMart. You can also purchase directly from us through our contact channels for bulk orders (10kg+). For our diaspora customers, we're currently available through select African grocery stores in the UK, US, and Canada.</p>
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <!-- Existing FAQ Item -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Where can I buy Kyidom Rice?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Kyidom Rice is available in major supermarkets across Ghana including Shoprite, Melcom, and
+                            MaxMart. You can also purchase directly from us through our contact channels for bulk orders
+                            (10kg+). For our diaspora customers, we're currently available through select African
+                            grocery stores in the UK, US, and Canada.</p>
+                    </div>
                 </div>
-            </div>
 
-            <!-- New FAQ Items -->
-            <div class="faq-item">
-                <button class="faq-question">
-                    What makes Kyidom Rice different from other brands?
-                    <i class="fas fa-chevron-down"></i>
-                </button>
-                <div class="faq-answer">
-                    <p>Kyidom Rice stands out through our triple guarantee: 100% stone-free, locally grown by Ghanaian farmers, and hygienically processed. Unlike imported rice, we maintain full control of our supply chain from farm to package, ensuring superior quality while supporting local agriculture. Our rice is also specially cleaned to preserve its natural nutrients and flavor.</p>
+                <!-- New FAQ Items -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What makes Kyidom Rice different from other brands?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Kyidom Rice stands out through our triple guarantee: 100% stone-free, locally grown by
+                            Ghanaian farmers, and hygienically processed. Unlike imported rice, we maintain full control
+                            of our supply chain from farm to package, ensuring superior quality while supporting local
+                            agriculture. Our rice is also specially cleaned to preserve its natural nutrients and
+                            flavor.</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="faq-item">
-                <button class="faq-question">
-                    How should I store Kyidom Rice for maximum freshness?
-                    <i class="fas fa-chevron-down"></i>
-                </button>
-                <div class="faq-answer">
-                    <p>For best results, store unopened packages in a cool, dry place away from direct sunlight. After opening, transfer rice to an airtight container and keep in your pantry. In Ghana's humid climate, you may add a few dried bay leaves to prevent insects. Properly stored, our rice maintains optimal quality for up to 12 months.</p>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How should I store Kyidom Rice for maximum freshness?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>For best results, store unopened packages in a cool, dry place away from direct sunlight.
+                            After opening, transfer rice to an airtight container and keep in your pantry. In Ghana's
+                            humid climate, you may add a few dried bay leaves to prevent insects. Properly stored, our
+                            rice maintains optimal quality for up to 12 months.</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="faq-item">
-                <button class="faq-question">
-                    Do you offer wholesale/bulk purchasing options?
-                    <i class="fas fa-chevron-down"></i>
-                </button>
-                <div class="faq-answer">
-                    <p>Yes! We offer special wholesale pricing for restaurants, caterers, and retailers purchasing 25kg bags or larger. Bulk orders receive additional benefits including free delivery within Greater Accra, flexible payment terms, and customized packaging options. Contact our sales team via phone or the contact form for wholesale inquiries.</p>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Do you offer wholesale/bulk purchasing options?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! We offer special wholesale pricing for restaurants, caterers, and retailers purchasing
+                            25kg bags or larger. Bulk orders receive additional benefits including free delivery within
+                            Greater Accra, flexible payment terms, and customized packaging options. Contact our sales
+                            team via phone or the contact form for wholesale inquiries.</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="faq-item">
-                <button class="faq-question">
-                    Is Kyidom Rice suitable for diabetics?
-                    <i class="fas fa-chevron-down"></i>
-                </button>
-                <div class="faq-answer">
-                    <p>While Kyidom Rice is a natural, unprocessed carbohydrate, we offer a special low-GI (Glycemic Index) variety that's more suitable for diabetics when consumed in moderation. This variety undergoes minimal processing to retain more fiber, resulting in slower glucose absorption. As with any dietary concern, we recommend consulting your nutritionist.</p>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Is Kyidom Rice suitable for diabetics?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>While Kyidom Rice is a natural, unprocessed carbohydrate, we offer a special low-GI (Glycemic
+                            Index) variety that's more suitable for diabetics when consumed in moderation. This variety
+                            undergoes minimal processing to retain more fiber, resulting in slower glucose absorption.
+                            As with any dietary concern, we recommend consulting your nutritionist.</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="faq-item">
-                <button class="faq-question">
-                    How do you support Ghanaian farmers?
-                    <i class="fas fa-chevron-down"></i>
-                </button>
-                <div class="faq-answer">
-                    <p>We partner directly with over 200 smallholder farmers across Ghana through our "Paddy to Plate" program. This includes:<br>
-                    - Paying 15-20% above market prices<br>
-                    - Providing free agricultural training<br>
-                    - Offering interest-free equipment loans<br>
-                    - Funding community projects in farming villages<br>
-                    5% of all profits are reinvested in farmer development initiatives.</p>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How do you support Ghanaian farmers?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We partner directly with over 200 smallholder farmers across Ghana through our "Paddy to
+                            Plate" program. This includes:<br>
+                            - Paying 15-20% above market prices<br>
+                            - Providing free agricultural training<br>
+                            - Offering interest-free equipment loans<br>
+                            - Funding community projects in farming villages<br>
+                            5% of all profits are reinvested in farmer development initiatives.</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="faq-item">
-                <button class="faq-question">
-                    What's the cooking ratio for Kyidom Rice?
-                    <i class="fas fa-chevron-down"></i>
-                </button>
-                <div class="faq-answer">
-                    <p>For perfect results every time, use a 1:2 rice-to-water ratio (1 cup rice to 2 cups water). Bring to a boil, then simmer covered for 15-18 minutes. For fluffier rice, let it rest for 5 minutes after cooking before serving. These instructions apply to our standard white rice - our parboiled variety may require slightly more water and cooking time.</p>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What's the cooking ratio for Kyidom Rice?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>For perfect results every time, use a 1:2 rice-to-water ratio (1 cup rice to 2 cups water).
+                            Bring to a boil, then simmer covered for 15-18 minutes. For fluffier rice, let it rest for 5
+                            minutes after cooking before serving. These instructions apply to our standard white rice -
+                            our parboiled variety may require slightly more water and cooking time.</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="faq-item">
-                <button class="faq-question">
-                    Do you have organic certification?
-                    <i class="fas fa-chevron-down"></i>
-                </button>
-                <div class="faq-answer">
-                    <p>Currently, 60% of our rice is grown using organic practices, though we're in the process of obtaining full organic certification from the Ghana Organic Agriculture Network. Our farmers use natural pest control methods and organic fertilizers. We intentionally avoid harmful pesticides and chemicals in all our rice production.</p>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Do you have organic certification?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Currently, 60% of our rice is grown using organic practices, though we're in the process of
+                            obtaining full organic certification from the Ghana Organic Agriculture Network. Our farmers
+                            use natural pest control methods and organic fertilizers. We intentionally avoid harmful
+                            pesticides and chemicals in all our rice production.</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="faq-item">
-                <button class="faq-question">
-                    Can I visit your farms or processing facility?
-                    <i class="fas fa-chevron-down"></i>
-                </button>
-                <div class="faq-answer">
-                    <p>We welcome visitors by appointment! We offer monthly "Farm to Table" tours where you can see our operations firsthand, meet the farmers, and learn about rice production. Tours include transportation from Accra, lunch featuring Kyidom Rice dishes, and a complimentary sample pack. Contact us at least 2 weeks in advance to schedule.</p>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Can I visit your farms or processing facility?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We welcome visitors by appointment! We offer monthly "Farm to Table" tours where you can see
+                            our operations firsthand, meet the farmers, and learn about rice production. Tours include
+                            transportation from Accra, lunch featuring Kyidom Rice dishes, and a complimentary sample
+                            pack. Contact us at least 2 weeks in advance to schedule.</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="faq-item">
-                <button class="faq-question">
-                    How can I become a distributor for Kyidom Rice?
-                    <i class="fas fa-chevron-down"></i>
-                </button>
-                <div class="faq-answer">
-                    <p>We're always looking to expand our distribution network. Potential distributors should have:<br>
-                    - Existing retail channels in Ghana or internationally<br>
-                    - Proper storage facilities<br>
-                    - Business registration documents<br>
-                    Submit your application through our website's contact form with "Distribution Inquiry" as the subject. Our team will contact you within 3 business days with our distributor requirements and benefits package.</p>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How can I become a distributor for Kyidom Rice?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We're always looking to expand our distribution network. Potential distributors should
+                            have:<br>
+                            - Existing retail channels in Ghana or internationally<br>
+                            - Proper storage facilities<br>
+                            - Business registration documents<br>
+                            Submit your application through our website's contact form with "Distribution Inquiry" as
+                            the subject. Our team will contact you within 3 business days with our distributor
+                            requirements and benefits package.</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- Footer -->
-   <footer>
+    <footer>
         <div class="container">
             <div class="footer-container">
                 <div class="footer-col">
                     <h3>Follow Us</h3>
-                    <a href="https://www.facebook.com/kyidomfoods?mibextid=ZbWKwL" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.facebook.com/kyidomfoods?mibextid=ZbWKwL" class="social-link"><i
+                            class="fab fa-facebook-f"></i></a>
                     <a href="http://tiktok.com/@kyidomfoods" class="social-link"><i class="fab fa-tiktok"></i></a>
-                    <a href="https://www.instagram.com/kyidomfoods?igsh=MTZ0NjY2OHFjNG01" class="social-link"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/company/jireh-aidoo-ltd/" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/kyidomfoods?igsh=MTZ0NjY2OHFjNG01" class="social-link"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/jireh-aidoo-ltd/" class="social-link"><i
+                            class="fab fa-linkedin-in"></i></a>
                 </div>
                 <div class="footer-col">
                     <h3>Quick Links</h3>
@@ -299,4 +353,5 @@
 
     <script src="js/main.js"></script>
 </body>
+
 </html>
