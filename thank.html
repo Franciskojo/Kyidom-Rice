@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Thank You | Kyidom Rice</title>
   <link rel="stylesheet" href="css/style.css"> <!-- link to your main CSS -->
+
+  <!-- SweetAlert2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -82,6 +86,56 @@
         window.location.href = "/";
       }
     }, 1000);
+
+
+document.querySelector("form").addEventListener("submit", async function(e) {
+  e.preventDefault();
+
+  const formData = Object.fromEntries(new FormData(this));
+
+  try {
+    let response = await fetch("/.netlify/functions/send-email", {
+      method: "POST",
+      body: JSON.stringify(formData),
+    });
+
+    if (response.ok) {
+      Swal.fire({
+        title: "✅ Message Sent!",
+        text: "Thank you for contacting us. We'll get back to you soon.",
+        icon: "success",
+        confirmButtonColor: "#4a8f29",   // brand green
+        imageUrl: "/images/logo.png",    // your logo
+        imageWidth: 80,
+        imageAlt: "Kyidom Rice Logo"
+      }).then(() => {
+        this.reset(); // clear the form
+      });
+    } else {
+      Swal.fire({
+        title: "❌ Oops!",
+        text: "Something went wrong, please try again later.",
+        icon: "error",
+        confirmButtonColor: "#4a8f29",   // brand green
+        imageUrl: "/images/logo.png",
+        imageWidth: 80,
+        imageAlt: "Kyidom Rice Logo"
+      });
+    }
+  } catch (err) {
+    Swal.fire({
+      title: "⚠️ Network Error",
+      text: "Please check your internet connection.",
+      icon: "warning",
+      confirmButtonColor: "#4a8f29",
+      imageUrl: "/images/logo.png",
+      imageWidth: 80,
+      imageAlt: "Kyidom Rice Logo"
+    });
+  }
+});
+
+
   </script>
 </body>
 </html>
