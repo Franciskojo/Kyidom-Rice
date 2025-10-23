@@ -149,4 +149,47 @@ document.addEventListener('DOMContentLoaded', function() {
 
  document.getElementById("year").textContent = new Date().getFullYear();
 
- 
+ // Blog Search Functionality
+const searchForm = document.querySelector('.search-form');
+if (searchForm) {
+    searchForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const searchTerm = this.querySelector('input').value;
+        alert(`Searching for: ${searchTerm}`);
+        // In a real implementation, this would filter blog posts
+    });
+}
+
+// Blog Newsletter Subscription
+const blogNewsletter = document.querySelector('.blog-sidebar .newsletter-form');
+if (blogNewsletter) {
+    blogNewsletter.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const email = this.querySelector('input').value;
+        alert(`Thank you for subscribing with: ${email}`);
+        this.reset();
+    });
+}
+
+// Blog Category Filtering
+const categoryLinks = document.querySelectorAll('.categories-list a');
+categoryLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const category = this.textContent.split(' ')[0];
+        alert(`Filtering by category: ${category}`);
+        // In a real implementation, this would filter blog posts by category
+    });
+});
+
+// Blog Tag Filtering
+const tagLinks = document.querySelectorAll('.tag');
+tagLinks.forEach(tag => {
+    tag.addEventListener('click', function(e) {
+        e.preventDefault();
+        const tagName = this.textContent;
+        alert(`Filtering by tag: ${tagName}`);
+        // In a real implementation, this would filter blog posts by tag
+    });
+});
+
