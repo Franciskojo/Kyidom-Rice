@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://jirehaidoo.com/sitemap.xml
+
