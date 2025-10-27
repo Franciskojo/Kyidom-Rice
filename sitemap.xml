@@ -20,12 +20,12 @@
     <loc>https://jirehaidoo.com/shop.html</loc>
     <priority>0.7</priority>
   </url>
-  <url>
+  <!-- <url>
     <loc>https://jirehaidoo.com/privacy-policy.html</loc>
     <priority>0.5</priority>
-  </url>
-  <url>
+  </url> -->
+  <!-- <url>
     <loc>https://jirehaidoo.com/terms.html</loc>
     <priority>0.5</priority>
-  </url>
+  </url> -->
 </urlset>
